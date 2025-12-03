@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Você Caiu no Phishing da Estratégia</title>
+  <style>
+    :root {
+      --bg: #050b1c;
+      --panel: #0f1733;
+      --accent: #ff5a8d;
+      --accent-2: #ffcfdf;
+      --text: #e8ecff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Space Grotesk", "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, rgba(74, 85, 255, 0.3), transparent 45%),
+        radial-gradient(circle at 20% 20%, rgba(255, 90, 141, 0.25), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    main {
+      width: min(620px, 100%);
+      background: var(--panel);
+      border-radius: 28px;
+      padding: clamp(1.5rem, 5vw, 3rem);
+      text-align: center;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    main::after,
+    main::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(255, 90, 141, 0.15);
+      filter: blur(12px);
+      z-index: 0;
+    }
+
+    main::before {
+      top: -80px;
+      right: -60px;
+    }
+
+    main::after {
+      bottom: -90px;
+      left: -70px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    p.lead {
+      margin: 0 auto 1.5rem;
+      max-width: 40ch;
+      color: #c8d0ff;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .big-emoji {
+      font-size: clamp(3rem, 12vw, 5rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 90, 141, 0.15);
+      border: 1px solid rgba(255, 90, 141, 0.4);
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.9rem;
+      color: var(--accent-2);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 420px;
+      text-align: left;
+      color: #b9c5ff;
+    }
+
+    li {
+      margin-bottom: 0.9rem;
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+
+    li::before {
+      content: "⚠️";
+      flex-shrink: 0;
+    }
+
+    .cta-row {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+
+    a.btn {
+      border-radius: 999px;
+      padding: 0.85rem 1.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    a.btn.primary {
+      background: linear-gradient(120deg, var(--accent), #ffa3bf);
+      color: #19030a;
+      box-shadow: 0 15px 30px rgba(255, 90, 141, 0.35);
+    }
+
+    a.btn.secondary {
+      border: 1px solid rgba(255, 90, 141, 0.4);
+      color: var(--accent-2);
+      background: transparent;
+    }
+
+    a.btn:hover {
+      transform: translateY(-4px);
+    }
+
+    footer {
+      margin-top: 1.8rem;
+      font-size: 0.85rem;
+      color: #8f9bd8;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="content">
+      <span class="tag">Alerta instantâneo</span>
+      <div class="big-emoji">🎯</div>
+      <h1>Ops... você clicou sem pensar!</h1>
+      <p class="lead">
+        Bem-vindo ao lendário <strong>"phishing da estratégia"</strong>. Não tem boleto, vírus ou golpe aqui: só uma lembrança bem-humorada de que clicar em qualquer link desconhecido pode sair caro.
+      </p>
+      <ul>
+        <li>Passo 1: Viram um link suspeito dizendo "promoção secreta".</li>
+        <li>Passo 2: Clicaram com um sorriso no rosto.</li>
+        <li>Passo 3: Chegaram aqui e descobriram que o prêmio era só uma zoeira.</li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn primary" href="https://training.knowbe4.com/lx/dashboard" target="_blank" rel="noopener">Aprender a não cair de novo</a>
+        <a class="btn secondary" href="mailto:rafael.silva@fastpays.com.br">Prometo verificar os links</a>
+      </div>
+      <footer>
+        Moral da história: estratégia boa é desconfiar antes do clique. Agora compartilha essa trollagem com a galera e mantenha todo mundo alerta.
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
